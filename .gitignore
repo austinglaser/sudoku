@@ -1,4 +1,10 @@
+#executables
 breadth_solve
 depth_solve
 
+#swap files
+.*.swp
+
+#object files
 *.o
+*.a

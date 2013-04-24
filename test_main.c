@@ -206,23 +206,7 @@ int main(int argc, char ** argv)
 	
 	fclose(f);
 	
-	if (verbose || manual) { //if we're in manual entry or verbose mode, print our starting board
-		printSudoku(s, pretty);
-		printf("\n");
-	}
-	
-	queue q = newQueue(-1, dS); //create a new queue
-	
-	int guesses;
-	sudoku sol = solve(q, s, &guesses);
-	if (!sol) printf("no solutions\n");
-	else if (verbose || manual) {
-		printf("\t--Solution--\n");
-		printf("Number of guesses made: %d\n\n", guesses);
-	}
-	if (sol) printSudoku(sol, pretty);
-	
-	deleteSudoku(sol);
-  deleteQueue(q);
-  return 0;
+  printSudoku(s, true);
+
+
 }
